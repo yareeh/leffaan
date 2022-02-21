@@ -23,6 +23,7 @@ module.exports = {
     plugins: ["react", "@typescript-eslint", "prettier"],
     rules: {
         "prettier/prettier": ["error", { tabWidth: 4 }],
+        "semi": [ "error", "never" ],
         "react/require-default-props": [1],
         "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
         "jsx-a11y/label-has-associated-control": ["error", {
