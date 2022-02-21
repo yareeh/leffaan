@@ -12,6 +12,7 @@ const DateNode = z
 
 const FinnkinoShow = z.object({
     ID: NumberNode,
+    EventID: NumberNode,
     dttmShowStartUTC: DateNode,
     Title: TextNode,
     OriginalTitle: TextNode,
@@ -42,4 +43,20 @@ export function parseFinnkino(xml: string): FinnkinoShow[] {
     return shows
 }
 
-export function toShow() {}
+export const toShow = (show: FinnkinoShow): Show => ({
+    operator: "Finnkino",
+    locationId: show.TheatreID,
+    startTime: show.dttmShowStartUTC,
+    movie: {
+        operatorIds: [{ operator: "Finnkino", id: show.EventID }],
+        localTitles: [{ lang: "fi", value: show.Title }],
+        operatorUrls: [{ operator: "Finnkino", url: show.EventURL }],
+        originalTitle: show.OriginalTitle,
+        runningTime: show.LengthInMinutes,
+        year: show.ProductionYear,
+    },
+    screen: show.TheatreAuditorium,
+    showDetails: show.PresentationMethodAndLanguage,
+    theatre: show.Theatre,
+    url: show.ShowURL,
+})
