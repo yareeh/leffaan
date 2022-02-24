@@ -11,7 +11,7 @@
         "react-dom": "^17.0.2",
         "web-vitals": "^2.1.4",
         "xml-js": "^1.6.11",
-        "zod": "^3.11.6"
+        "zod": "^3.12.0"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -43,13 +43,13 @@
         "@testing-library/react": "^12.0.0",
         "@testing-library/user-event": "^13.2.1",
         "@types/chai": "^4.3.0",
-        "@types/jest": "^27.0.1",
+        "@types/jest": "^27.4.1",
         "@types/mocha": "^9.1.0",
         "@types/node": "^16.7.13",
         "@types/react": "^17.0.20",
         "@types/react-dom": "^17.0.9",
         "@typescript-eslint/eslint-plugin": "^5.12.0",
-        "@typescript-eslint/parser": "^5.12.0",
+        "@typescript-eslint/parser": "^5.12.1",
         "eslint": "^8.9.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-typescript": "^16.1.0",
