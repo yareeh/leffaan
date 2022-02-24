@@ -1,3 +1,4 @@
+import { zonedTimeToUtc } from "date-fns-tz"
 import parse from "date-fns/parse"
 import { decode } from "html-entities"
 import * as z from "zod"
@@ -8,7 +9,10 @@ const KinotShow = z.object({
     datetime: z
         .string()
         .transform((datetime) =>
-            parse(datetime, "dd.MM.yyyy HH:mm", new Date())
+            zonedTimeToUtc(
+                parse(datetime, "dd.MM.yyyy HH:mm", new Date()),
+                "Europe/Helsinki"
+            )
         ),
     theater_title: z.string(),
     movie_id: z.number(),
