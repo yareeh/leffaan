@@ -3,13 +3,13 @@ interface LocalizedString {
     value: string
 }
 
-type Operator = "Finnkino"
+type Operator = "Finnkino" | "Kinot"
 
 export interface Movie {
-    originalTitle: string
+    originalTitle?: string
     localTitles: LocalizedString[]
-    year: number
-    runningTime: number
+    year?: number
+    runningTime?: number
     operatorUrls: [{ operator: Operator; url: string }]
     operatorIds: [{ operator: Operator; id: string | number }]
 }
@@ -18,9 +18,9 @@ export interface Show {
     movie: Movie
     operator: Operator
     startTime: Date
-    locationId: string | number
+    locationId?: string | number
     theatre: string
-    screen: string
-    showDetails: string
+    screen?: string
+    showDetails?: string
     url: string
 }
