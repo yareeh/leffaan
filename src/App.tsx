@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react"
 import "./App.css"
-import { parseFinnkino, toShow } from "./finnkino"
+import { finnkinoShowToShow, parseFinnkino } from "./finnkino"
 import { kinotShowToShow, parseKinotJson } from "./kinot-fi"
 import { Show } from "./types"
 
@@ -19,7 +19,7 @@ async function getFinnkinoShows(): Promise<Show[]> {
     )
     const finnkinoXml = await response.text()
     const finnkinoShows = parseFinnkino(finnkinoXml)
-    return finnkinoShows.map(toShow)
+    return finnkinoShows.map(finnkinoShowToShow)
 }
 
 function App() {
