@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import { xml2js } from "xml-js"
 import * as z from "zod"
+import { Show } from "./types"
 
 const TextNode = z.object({ _text: z.string() }).transform((node) => node._text)
 const NumberNode = z
