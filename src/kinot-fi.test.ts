@@ -15,6 +15,7 @@ describe("kinot-fi", () => {
         )
         const show = kinotShowToShow(shows[0])
         expect(show).toEqual({
+            operatorId: 31051,
             movie: {
                 localTitles: [
                     {

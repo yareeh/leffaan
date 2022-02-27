@@ -35,6 +35,7 @@ describe("finnkino", () => {
                 runningTime: 127,
                 year: 2020,
             },
+            operatorId: 1673976,
             operator: "Finnkino",
             startTime: new Date("2022-02-20T08:30:00.000Z"),
             locationId: 1038,

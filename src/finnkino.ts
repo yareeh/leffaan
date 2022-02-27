@@ -45,6 +45,7 @@ export function parseFinnkino(xml: string): FinnkinoShow[] {
 }
 
 export const toShow = (show: FinnkinoShow): Show => ({
+    operatorId: show.ID,
     operator: "Finnkino",
     locationId: show.TheatreID,
     startTime: show.dttmShowStartUTC,
