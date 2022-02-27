@@ -26,4 +26,10 @@ test("renders app", async () => {
     await waitFor(() =>
         expect(screen.getAllByText(/piemonten/i)[0]).toBeInTheDocument()
     )
+    await waitFor(() =>
+        expect(screen.getAllByText(/tennispalatsi/i)[0]).toBeInTheDocument()
+    )
+    await waitFor(() =>
+        expect(screen.getAllByText(/orion/i)[0]).toBeInTheDocument()
+    )
 })
