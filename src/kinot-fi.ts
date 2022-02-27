@@ -27,6 +27,7 @@ export function parseKinotJson(json: any): KinotShow[] {
 }
 export function kinotShowToShow(show: KinotShow): Show {
     return {
+        operatorId: show.id,
         movie: {
             localTitles: [{ lang: "fi", value: show.movie_title }],
             operatorUrls: [{ operator: "Kinot", url: show.link }],

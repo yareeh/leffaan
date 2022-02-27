@@ -15,6 +15,7 @@ export interface Movie {
 }
 
 export interface Show {
+    operatorId: string | number
     movie: Movie
     operator: Operator
     startTime: Date
