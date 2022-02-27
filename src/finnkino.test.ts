@@ -1,5 +1,5 @@
 import { readFileSync } from "fs"
-import { parseFinnkino, toShow } from "./finnkino"
+import { parseFinnkino, finnkinoShowToShow } from "./finnkino"
 
 describe("finnkino", () => {
     it("can parse test xml", () => {
@@ -10,7 +10,7 @@ describe("finnkino", () => {
         const shows = parseFinnkino(
             readFileSync("./test-data/schedule.xml").toString()
         )
-        const show = toShow(shows[0])
+        const show = finnkinoShowToShow(shows[0])
         expect(show).toEqual({
             movie: {
                 localTitles: [

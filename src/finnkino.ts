@@ -44,7 +44,7 @@ export function parseFinnkino(xml: string): FinnkinoShow[] {
     return shows
 }
 
-export const toShow = (show: FinnkinoShow): Show => ({
+export const finnkinoShowToShow = (show: FinnkinoShow): Show => ({
     operatorId: show.ID,
     operator: "Finnkino",
     locationId: show.TheatreID,
