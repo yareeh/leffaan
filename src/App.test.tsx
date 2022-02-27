@@ -1,9 +1,29 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen, waitFor } from "@testing-library/react"
+import { readFileSync } from "fs"
+import { enableFetchMocks } from "jest-fetch-mock"
 import React from "react"
 import App from "./App"
 
-test("renders app", () => {
+enableFetchMocks()
+
+beforeEach(() => {
+    fetchMock.mockIf(/^https:\/\/www.kinot.fi/, () =>
+        Promise.resolve({
+            status: 200,
+            body: readFileSync("./test-data/kinot.fi.json").toString(),
+        })
+    )
+    fetchMock.mockIf(/^https:\/\/www.finnkino.fi/, () =>
+        Promise.resolve({
+            status: 200,
+            body: readFileSync("./test-data/schedule.xml").toString(),
+        })
+    )
+})
+
+test("renders app", async () => {
     render(<App />)
-    const title = screen.getByText(/Shows/i)
-    expect(title).toBeInTheDocument()
+    await waitFor(() =>
+        expect(screen.getAllByText(/piemonten/i)[0]).toBeInTheDocument()
+    )
 })
