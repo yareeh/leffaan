@@ -7,7 +7,10 @@ import React from "react"
 import App from "./App"
 import { setTimeSource } from "./time"
 
-const testDate = new Date("2022-02-27T16:30:00Z")
+const testDate = zonedTimeToUtc(
+    new Date("2022-02-27T16:30:00Z"),
+    "Europe/Helsinki"
+)
 enableFetchMocks()
 setTimeSource(() => testDate)
 
