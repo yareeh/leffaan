@@ -15,31 +15,31 @@ describe("kinot-fi", () => {
         )
         const show = kinotShowToShow(shows[0])
         expect(show).toEqual({
-            operatorId: 31051,
+            operatorId: 31177,
             movie: {
                 localTitles: [
                     {
                         lang: "fi",
-                        value: "Guled & Nasra",
+                        value: "Kuolema Niilillä",
                     },
                 ],
                 operatorIds: [
                     {
-                        id: 29974,
+                        id: 30938,
                         operator: "Kinot",
                     },
                 ],
                 operatorUrls: [
                     {
                         operator: "Kinot",
-                        url: "https://cinemaorion.fi/elokuvat/guled-nasra/",
+                        url: "https://www.kinotapiola.fi/naytos/kuolema-niililla-4/",
                     },
                 ],
             },
             operator: "Kinot",
-            startTime: new Date("2022-02-24T11:00:00.000Z"),
-            theatre: "Cinema Orion",
-            url: "https://cinemaorion.fi/elokuvat/guled-nasra/",
+            startTime: new Date("2022-02-27T15:15:00.000Z"),
+            theatre: "Kino Tapiola",
+            url: "https://www.kinotapiola.fi/naytos/kuolema-niililla-4/",
         })
     })
 })

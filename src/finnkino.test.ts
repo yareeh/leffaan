@@ -1,5 +1,5 @@
 import { readFileSync } from "fs"
-import { parseFinnkino, finnkinoShowToShow } from "./finnkino"
+import { finnkinoShowToShow, parseFinnkino } from "./finnkino"
 
 describe("finnkino", () => {
     it("can parse test xml", () => {
@@ -16,33 +16,33 @@ describe("finnkino", () => {
                 localTitles: [
                     {
                         lang: "fi",
-                        value: "Kuolema Niilillä",
+                        value: "Guled & Nasra",
                     },
                 ],
                 operatorIds: [
                     {
-                        id: 303523,
+                        id: 303715,
                         operator: "Finnkino",
                     },
                 ],
                 operatorUrls: [
                     {
                         operator: "Finnkino",
-                        url: "http://www.finnkino.fi/event/303523/title/kuolema_niilill%C3%A4/",
+                        url: "http://www.finnkino.fi/event/303715/title/guled_and_nasra/",
                     },
                 ],
-                originalTitle: "Death on the Nile",
-                runningTime: 127,
-                year: 2020,
+                originalTitle: "Guled & Nasra",
+                runningTime: 83,
+                year: 2021,
             },
-            operatorId: 1673976,
+            operatorId: 1676827,
             operator: "Finnkino",
-            startTime: new Date("2022-02-20T08:30:00.000Z"),
-            locationId: 1038,
-            theatre: "Tennispalatsi, Helsinki",
-            screen: "sali 8",
-            showDetails: "2D, englanti",
-            url: "http://www.finnkino.fi/websales/show/1673976/",
+            startTime: new Date("2022-02-27T08:30:00.000Z"),
+            locationId: 1034,
+            theatre: "Kinopalatsi, Helsinki",
+            screen: "sali 7",
+            showDetails: "2D, somali",
+            url: "http://www.finnkino.fi/websales/show/1676827/",
         })
     })
 })
