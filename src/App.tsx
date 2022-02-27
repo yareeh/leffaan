@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useState } from "react"
 import "./App.css"
 import { finnkinoShowToShow, parseFinnkino } from "./finnkino"
 import { kinotShowToShow, parseKinotJson } from "./kinot-fi"
+import { timeSource } from "./time"
 import { Show } from "./types"
 
 async function getKinotShows(): Promise<Show[]> {
@@ -29,9 +30,10 @@ function App() {
     const getShows = useCallback(async () => {
         const kinotShows = await getKinotShows()
         const finnkinoShows = await getFinnkinoShows()
-        const allShows = [...kinotShows, ...finnkinoShows].sort(
-            (s1, s2) => s1.startTime.getTime() - s2.startTime.getTime()
-        )
+        const now = timeSource().getTime()
+        const allShows = [...kinotShows, ...finnkinoShows]
+            .filter((s) => s.startTime.getTime() >= now)
+            .sort((s1, s2) => s1.startTime.getTime() - s2.startTime.getTime())
         showsSet(allShows)
     }, [])
 
@@ -44,14 +46,22 @@ function App() {
             <div>
                 <h1>Shows</h1>
                 {shows.map((s) => (
-                    <div key={`${s.operator}-${s.operatorId}`}>
+                    <div key={`${s.operator}-${s.operatorId}`} className="show">
                         <div className="show__title">
-                            {s.movie.localTitles[0].value}
+                            {s.movie.operatorUrls[0] ? (
+                                <a href={s.movie.operatorUrls[0]!.url}>
+                                    {s.movie.localTitles[0].value}
+                                </a>
+                            ) : (
+                                <span>{s.movie.localTitles[0].value}</span>
+                            )}
                         </div>
                         <div className="show__startDateTime">
-                            {format(s.startTime, "d.M.yyyy H:mm", {
-                                timeZone: "Europe/Helsinki",
-                            })}
+                            <a href={s.url}>
+                                {format(s.startTime, "d.M.yyyy H:mm", {
+                                    timeZone: "Europe/Helsinki",
+                                })}
+                            </a>
                         </div>
                         <div className="show__theatre">{s.theatre}</div>
                     </div>
