@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App-logo {
@@ -35,4 +38,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.show {
+    border: 1px solid lightblue;
+    border-radius: 8px;
+    color: lightblue;
+    width: 200px;
+    margin-bottom: 8px;
+    padding: 4px;
+}
+
+.show__title {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.show_title a:link {
+    color: lightblue;
+    text-decoration: none;
+}
+
+.show_startDateTime a:link {
+    color: lightblue;
+    text-decoration: none;
+    font-style: italic;
 }
