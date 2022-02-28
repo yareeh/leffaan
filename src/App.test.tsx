@@ -7,10 +7,8 @@ import React from "react"
 import App from "./App"
 import { setTimeSource } from "./time"
 
-const testDate = zonedTimeToUtc(
-    new Date("2022-02-27T16:30:00Z"),
-    "Europe/Helsinki"
-)
+const testDate = new Date("2022-02-27T16:30:00.000Z")
+console.log(testDate.toISOString())
 enableFetchMocks()
 setTimeSource(() => testDate)
 
@@ -38,12 +36,14 @@ async function forPageToLoad() {
 
 function getDates() {
     const dateElements = document.querySelectorAll(".show__startDateTime")
-    return Array.from(dateElements).map((e) =>
-        zonedTimeToUtc(
+    return Array.from(dateElements).map((e, i) => {
+        const date = zonedTimeToUtc(
             parse(e.textContent!, "d.M.yyyy H:mm", new Date()),
             "Europe/Helsinki"
-        ).getTime()
-    )
+        )
+        console.log(i, e.textContent, date, testDate)
+        return date.getTime()
+    })
 }
 describe("App", () => {
     test("renders app", async () => {
