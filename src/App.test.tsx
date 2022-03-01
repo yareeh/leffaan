@@ -2,7 +2,7 @@ import { render, screen, waitFor } from "@testing-library/react"
 import { zonedTimeToUtc } from "date-fns-tz"
 import parse from "date-fns/parse"
 import { readFileSync } from "fs"
-import { enableFetchMocks } from "jest-fetch-mock"
+import fetchMock, { enableFetchMocks } from "jest-fetch-mock"
 import React from "react"
 import App from "./App"
 import { setTimeSource } from "./time"
@@ -13,18 +13,22 @@ enableFetchMocks()
 setTimeSource(() => testDate)
 
 beforeEach(() => {
-    fetchMock.mockIf(/^https:\/\/www.kinot.fi/, () =>
-        Promise.resolve({
-            status: 200,
-            body: readFileSync("./test-data/kinot.fi.json").toString(),
-        })
-    )
-    fetchMock.mockIf(/^https:\/\/www.finnkino.fi/, () =>
-        Promise.resolve({
-            status: 200,
-            body: readFileSync("./test-data/schedule.xml").toString(),
-        })
-    )
+    fetchMock.doMock()
+    fetchMock.mockResponse((req) => {
+        if (req.url.startsWith("https://www.kinot.fi")) {
+            return Promise.resolve({
+                status: 200,
+                body: readFileSync("./test-data/kinot.fi.json").toString(),
+            })
+        }
+        if (req.url.startsWith("https://www.finnkino.fi")) {
+            return Promise.resolve({
+                status: 200,
+                body: readFileSync("./test-data/schedule.xml").toString(),
+            })
+        }
+        return Promise.resolve("")
+    })
 })
 
 async function forPageToLoad() {
