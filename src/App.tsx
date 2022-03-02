@@ -3,7 +3,6 @@ import React, { useCallback, useEffect, useState } from "react"
 import "./App.css"
 import { finnkinoShowToShow, parseFinnkino } from "./finnkino"
 import { kinotShowToShow, parseKinotJson } from "./kinot-fi"
-import { timeSource } from "./time"
 import { Show } from "./types"
 
 async function getKinotShows(): Promise<Show[]> {
@@ -24,13 +23,20 @@ async function getFinnkinoShows(): Promise<Show[]> {
     return finnkinoShows.map(finnkinoShowToShow)
 }
 
-function App() {
+interface Properties {
+    timeSource?: () => Date
+}
+
+function App(props: Properties) {
+    const { timeSource } = props
+    const time = timeSource || (() => new Date())
+
     const [shows, showsSet] = useState<Show[]>([])
 
     const getShows = useCallback(async () => {
         const kinotShows = await getKinotShows()
         const finnkinoShows = await getFinnkinoShows()
-        const now = timeSource().getTime()
+        const now = time().getTime()
         const allShows = [...kinotShows, ...finnkinoShows]
             .filter((s) => s.startTime.getTime() >= now)
             .sort((s1, s2) => s1.startTime.getTime() - s2.startTime.getTime())

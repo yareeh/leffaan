@@ -5,11 +5,11 @@ import { readFileSync } from "fs"
 import fetchMock, { enableFetchMocks } from "jest-fetch-mock"
 import React from "react"
 import App from "./App"
-import { setTimeSource } from "./time"
 
 const testDate = new Date("2022-02-27T16:30:00.000Z")
+const timeSource = () => testDate
+
 enableFetchMocks()
-setTimeSource(() => testDate)
 
 beforeEach(() => {
     fetchMock.doMock()
@@ -31,7 +31,7 @@ beforeEach(() => {
 })
 
 async function forPageToLoad() {
-    render(<App />)
+    render(<App timeSource={timeSource} />)
     await waitFor(() =>
         expect(screen.getAllByText(/piemonten/i)[0]).toBeInTheDocument()
     )
