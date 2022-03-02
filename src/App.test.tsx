@@ -39,7 +39,7 @@ async function forPageToLoad() {
 
 function getDates() {
     const dateElements = document.querySelectorAll(".show__startDateTime")
-    return Array.from(dateElements).map((e, i) => {
+    return Array.from(dateElements).map((e) => {
         const date = zonedTimeToUtc(
             parse(e.textContent!, "d.M.yyyy H:mm", new Date()),
             "Europe/Helsinki"
