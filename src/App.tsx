@@ -1,4 +1,4 @@
-import { format } from "date-fns-tz"
+import { formatInTimeZone } from "date-fns-tz"
 import React, { useCallback, useEffect, useState } from "react"
 import "./App.css"
 import { finnkinoShowToShow, parseFinnkino } from "./finnkino"
@@ -71,9 +71,11 @@ function App(props: Properties) {
                         </div>
                         <div className="show__startDateTime">
                             <a href={s.url}>
-                                {format(s.startTime, "d.M.yyyy H:mm", {
-                                    timeZone: "Europe/Helsinki",
-                                })}
+                                {formatInTimeZone(
+                                    s.startTime,
+                                    "Europe/Helsinki",
+                                    "d.M.yyyy H:mm"
+                                )}
                             </a>
                         </div>
                         <div className="show__theatre">{s.theatre}</div>
