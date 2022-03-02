@@ -34,6 +34,13 @@ function App() {
         const allShows = [...kinotShows, ...finnkinoShows]
             .filter((s) => s.startTime.getTime() >= now)
             .sort((s1, s2) => s1.startTime.getTime() - s2.startTime.getTime())
+        const log = allShows
+            .map(
+                (s, i) =>
+                    `${i} ${s.movie.localTitles[0].value} ${s.theatre} ${s.startTime}`
+            )
+            .join("\n")
+        console.log(log)
         showsSet(allShows)
     }, [])
 
