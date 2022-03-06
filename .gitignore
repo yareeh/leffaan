@@ -35,3 +35,13 @@ test-results/
 playwright-report/
 
 .env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# next.js
+/.next/
+/out/
