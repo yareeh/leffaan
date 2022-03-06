@@ -33,3 +33,5 @@ yarn-error.log*
 /out/
 test-results/
 playwright-report/
+
+.env
