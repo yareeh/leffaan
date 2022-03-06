@@ -45,3 +45,5 @@ playwright-report/
 # next.js
 /.next/
 /out/
+test-results/
+playwright-report/
