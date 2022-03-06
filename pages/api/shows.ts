@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { finnkinoShowToShow, parseFinnkino } from '../../src/finnkino'
-import { kinotShowToShow, parseKinotJson } from '../../src/kinot-fi'
-import { Show } from '../../src/types'
+import type { NextApiRequest, NextApiResponse } from "next"
+import { finnkinoShowToShow, parseFinnkino } from "../../src/finnkino"
+import { kinotShowToShow, parseKinotJson } from "../../src/kinot-fi"
+import { Show } from "../../src/types"
 
 async function getKinotShows(): Promise<Show[]> {
     const response = await fetch(
@@ -11,7 +11,6 @@ async function getKinotShows(): Promise<Show[]> {
     const kinotResult = parseKinotJson(kinotResponse)
     return kinotResult.map(kinotShowToShow)
 }
-
 
 async function getFinnkinoShows(): Promise<Show[]> {
     const response = await fetch(

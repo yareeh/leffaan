@@ -1,9 +1,9 @@
-import { formatInTimeZone } from 'date-fns-tz'
-import type { NextPage } from 'next'
-import { useRouter } from 'next/router'
-import useSWR from 'swr'
-import { Show } from '../src/types'
-import styles from '../styles/Home.module.css'
+import { formatInTimeZone } from "date-fns-tz"
+import type { NextPage } from "next"
+import { useRouter } from "next/router"
+import useSWR from "swr"
+import { Show } from "../src/types"
+import styles from "../styles/Home.module.css"
 
 const fetcher = async (url: string): Promise<Show[]> => {
     const res = await fetch(url)
@@ -18,10 +18,7 @@ const fetcher = async (url: string): Promise<Show[]> => {
 }
 const Home: NextPage = () => {
     const { query } = useRouter()
-    const { data, error } = useSWR(
-        () => `/api/shows`,
-        fetcher
-    )
+    const { data, error } = useSWR(() => `/api/shows`, fetcher)
 
     if (error) return <div>{error.message}</div>
     if (!data) return <div>Loading...</div>
