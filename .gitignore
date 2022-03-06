@@ -31,4 +31,5 @@ yarn-error.log*
 # next.js
 /.next/
 /out/
-
+test-results/
+playwright-report/
