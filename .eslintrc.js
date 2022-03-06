@@ -5,11 +5,8 @@ module.exports = {
         node: true,
     },
     extends: [
-        "plugin:react/recommended",
-        "airbnb",
-        "airbnb-typescript",
+        "next/core-web-vitals",
         "prettier",
-        "plugin:react-hooks/recommended",
     ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
@@ -20,17 +17,10 @@ module.exports = {
         sourceType: "module",
         project: "./tsconfig.json",
     },
-    plugins: ["react", "@typescript-eslint", "prettier"],
+    plugins: ["@typescript-eslint", "prettier"],
     rules: {
         "prettier/prettier": ["error", { tabWidth: 4 }],
         "semi": [ "error", "never" ],
-        "react/require-default-props": [1],
-        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-        "jsx-a11y/label-has-associated-control": ["error", {
-            "required": {
-                "some": ["nesting", "id"]
-            }
-        }],
         "@typescript-eslint/no-redeclare": ["off"]
     },
 };
