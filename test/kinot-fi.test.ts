@@ -1,5 +1,6 @@
+import { expect } from "chai"
 import { readFileSync } from "fs"
-import { kinotShowToShow, parseKinotJson } from "./kinot-fi"
+import { kinotShowToShow, parseKinotJson } from "../src/kinot-fi"
 
 describe("kinot-fi", () => {
     it("can parse test json", () => {
@@ -14,7 +15,7 @@ describe("kinot-fi", () => {
             JSON.parse(readFileSync("./test-data/kinot.fi.json").toString())
         )
         const show = kinotShowToShow(shows[0])
-        expect(show).toEqual({
+        expect(show).to.deep.equal({
             operatorId: 31177,
             movie: {
                 localTitles: [
