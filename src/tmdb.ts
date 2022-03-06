@@ -1,3 +1,4 @@
+import fetch from "node-fetch"
 import * as z from "zod"
 import { number } from "zod"
 
