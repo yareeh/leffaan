@@ -1,0 +1,13 @@
+import { readFileSync } from "fs"
+
+export const mockKinot = async () => {
+    return JSON.parse(readFileSync("./test-data/kinot.fi.json").toString())
+}
+
+export const mockFinnkino = async () => {
+    return readFileSync("./test-data/schedule.xml").toString()
+}
+
+export const mockDate = () => {
+    return new Date("2022-02-27T16:30:00.000Z")
+}
