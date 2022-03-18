@@ -1,0 +1,25 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/sgFerVcIGeqCNFqsNIokHw503sq.jpg",
+            "genre_ids": [
+                99
+            ],
+            "id": 653762,
+            "original_language": "it",
+            "original_title": "The Truffle Hunters",
+            "overview": "In the secret forests of Northern Italy, a dwindling group of joyful old men and their faithful dogs search for the world’s most expensive ingredient, the white Alba truffle. Their stories form a real-life fairy tale that celebrates human passion in a fragile land that seems forgotten in time.",
+            "popularity": 7.065,
+            "poster_path": "/intmVeOMY0BfpvaqCWOKY8eTLLI.jpg",
+            "release_date": "2020-12-25",
+            "title": "The Truffle Hunters",
+            "video": false,
+            "vote_average": 8,
+            "vote_count": 19
+        }
+    ],
+    "total_pages": 1,
+    "total_results": 1
+}

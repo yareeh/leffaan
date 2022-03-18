@@ -1,0 +1,369 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/ishSjAPkCLpy6Q3jCcGrKzxvwTH.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 10549,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "Hamlet, Prince of Denmark, returns home to find his father murdered and his mother now marrying the murderer... his uncle. Meanwhile, war is brewing.",
+            "popularity": 13.646,
+            "poster_path": "/ilurgUOp6SCl4cuhfjctj1qxlfZ.jpg",
+            "release_date": "1996-12-25",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 373
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/rUxEvkpWMnPjlaX47RiRXYGMGwX.jpg",
+            "genre_ids": [
+                18,
+                36
+            ],
+            "id": 10264,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "Hamlet, Prince of Denmark, finds out that his uncle Claudius killed his father to obtain the throne, and plans revenge.",
+            "popularity": 11.243,
+            "poster_path": "/ycM8gwwyOLXW4qxkcu6nhLlfgcA.jpg",
+            "release_date": "1990-12-19",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 6.6,
+            "vote_count": 327
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/Ar6gRrcSyDrlCgHuertc2Emz0xr.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 10688,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "Modern day adaptation of Shakespeare's immortal story about Hamlet's plight to avenge his father's murder in New York City.",
+            "popularity": 9.51,
+            "poster_path": "/yL1rYMHlqZtZVESxEWLsaneXq86.jpg",
+            "release_date": "2000-05-12",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 5.8,
+            "vote_count": 106
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/tFfucMJh4Me1JYBIRJcOokWWuLs.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 23383,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "Winner of four Academy Awards, including Best Picture and Best Actor, Sir Laurence Olivier’s Hamlet continues to be the most compelling version of Shakespeare’s beloved tragedy. Olivier is at his most inspired—both as director and as the melancholy Dane himself—as he breathes new life into the words of one of the world’s greatest dramatists.",
+            "popularity": 10.182,
+            "poster_path": "/woO9SgU2vTRMZeG0YqOLeoIqlzC.jpg",
+            "release_date": "1948-12-10",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 182
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/2IPOmxB7tBxXe1tkP3oR4Qbr40n.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 28238,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "David Tennant stars in a film of the Royal Shakespeare Company's award-winning production of Shakespeare's great play. Director Gregory Doran's modern-dress production was hailed by the critics as thrilling, fast-moving and, in parts, very funny.",
+            "popularity": 7.747,
+            "poster_path": "/ykluFIkzQocbsZO1F4au8HV8naQ.jpg",
+            "release_date": "2009-12-26",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 56
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/fIV7j1fsWlHXE8mjgMfzvsLtGav.jpg",
+            "genre_ids": [
+                35,
+                10402
+            ],
+            "id": 12621,
+            "original_language": "en",
+            "original_title": "Hamlet 2",
+            "overview": "In this irreverent comedy, a failed actor-turned-worse-high-school-drama-teacher rallies his Tucson, AZ students as he conceives and stages politically incorrect musical sequel to Shakespeare's Hamlet.",
+            "popularity": 9.558,
+            "poster_path": "/ljdmxGNwhuWZBsCgANlZrruFkJj.jpg",
+            "release_date": "2008-01-21",
+            "title": "Hamlet 2",
+            "video": false,
+            "vote_average": 5.9,
+            "vote_count": 137
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/YbzfnWSeZvfABKn0zSyY3IY0IV.jpg",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "id": 8749,
+            "original_language": "fi",
+            "original_title": "Hamlet liikemaailmassa",
+            "overview": "A bizarre black-and-white film noir reworking of Shakespeare's 'Hamlet'.",
+            "popularity": 3.714,
+            "poster_path": "/5OjVh44NDV3m8ePTt2BXMWTzlH5.jpg",
+            "release_date": "1987-08-21",
+            "title": "Hamlet Goes Business",
+            "video": false,
+            "vote_average": 6.3,
+            "vote_count": 23
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/2OlaeKSohqs8d2yYe2W9ZeP70Uh.jpg",
+            "genre_ids": [
+                18,
+                10749
+            ],
+            "id": 396227,
+            "original_language": "en",
+            "original_title": "National Theatre Live: Hamlet",
+            "overview": "As a country arms itself for war, a family tears itself apart. Forced to avenge his father's death but paralyzed by the task ahead, Hamlet rages against the impossibility of his predicament, threatening both his sanity and the security of the state.",
+            "popularity": 6.915,
+            "poster_path": "/3GLQDQ8WvIEXxLf5qOtUWokrcKd.jpg",
+            "release_date": "2015-10-15",
+            "title": "National Theatre Live: Hamlet",
+            "video": true,
+            "vote_average": 7.5,
+            "vote_count": 42
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                18
+            ],
+            "id": 175341,
+            "original_language": "de",
+            "original_title": "Hamlet",
+            "overview": "Free adaptation of Shakespeare′s drama: The Danish queen masquerades her daughter as a boy. Thus, the girl lives her whole life as Prince Hamlet. When the King is killed in an assault by Hamlet′s uncle, Hamlet seeks revenge. His friend Horatio, whom Hamlet secretly loves, is the only one who is let in on the revenge plans. When Hamlet is killed in the end Horatio finally finds out that the Prince was a woman.",
+            "popularity": 2.461,
+            "poster_path": "/7omsOUJQozhSOvwT23CIwfkkhaX.jpg",
+            "release_date": "1921-01-27",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 7.3,
+            "vote_count": 14
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 346923,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "From its sell-out run at Manchester's Royal Exchange Theatre comes a film version of this unique and critically acclaimed production of Hamlet with BAFTA-nominee Maxine Peake in the title role. This ground-breaking stage production, directed by Sarah Frankcom, was the Royal Exchange's fastest-selling show in a decade.",
+            "popularity": 3.149,
+            "poster_path": "/cJgT9RV8512rMUd64bs5LF4Peeo.jpg",
+            "release_date": "2015-03-23",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 7.8,
+            "vote_count": 5
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                99
+            ],
+            "id": 263513,
+            "original_language": "en",
+            "original_title": "Discovering Hamlet",
+            "overview": "IN 1988, rising star Kenneth Branagh tackled the role of Shakespeare’s prince of Denmark for the first time in his professional career under the guidance of celebrated actor Derek Jacobi. Narrated by Patrick Stewart, this hour-long film documents how Kenneth Branagh and Derek Jacobi, two intelligent and passionate men, found new depths in Shakespeare’s classic drama, Hamlet. Filmmakers Mark Olshaker and Larry Klein follow the company through four weeks of rehearsals, from the first read-throughs to opening night.",
+            "popularity": 2.846,
+            "poster_path": "/5VjLC2IiuR6f0rbKruEgONTeU6d.jpg",
+            "release_date": "1990-01-07",
+            "title": "Discovering Hamlet",
+            "video": false,
+            "vote_average": 6.1,
+            "vote_count": 5
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                18
+            ],
+            "id": 42605,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "Tony Richardson's Hamlet is based on his own stage production. Filmed entirely within the Roundhouse in London (a disused train shed), it is shot almost entirely in close up, focusing the attention on faces and language rather than action.",
+            "popularity": 2.391,
+            "poster_path": "/bfH3D57JkXewQ6rxVtEGJ7vhsFB.jpg",
+            "release_date": "1969-12-21",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 6.1,
+            "vote_count": 8
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/seXagbqWbbEoeSFaHNOIzJmQxH0.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 515392,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "Hamlet captures the Almeida Theatre's 2017 acclaimed production of William Shakespeare's great play, recorded as-live in its West End transfer on the stage of London's Harold Pinter Theatre.  Robert Icke's innovative modern-dress production, featuring Andrew Scott, Juliet Stevenson, Angus Wright and Jessica Brown Findlay, has been widely acclaimed as a dazzlingly intelligent, forcefully contemporary staging. The Evening Standard hailed Andrew Scott's 'career-defining performance... he makes the most famous speeches feel fresh and unpredictable.'",
+            "popularity": 1.933,
+            "poster_path": "/fpBiGjAWMmoqntbnuOJMQiGBbaH.jpg",
+            "release_date": "2018-03-31",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 5.2,
+            "vote_count": 5
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                18
+            ],
+            "id": 431067,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "A ghostly visitor with a shocking secret, a daughter devastated by loss, a deadly duel – and the most famous question in all of drama. Just some of the reasons why Shakespeare’s iconic tragedy will hold you spellbound.",
+            "popularity": 1.479,
+            "poster_path": "/81295h1ZHIxDEstpBAwTUvomlGs.jpg",
+            "release_date": "2016-04-23",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/s0uYRHjBBMICYYt2WwQaoIAVkEG.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 427796,
+            "original_language": "en",
+            "original_title": "RSC Live: Hamlet",
+            "overview": "Hamlet has the world at his feet. Young, wealthy and living a hedonistic life studying abroad. Then word reaches him that his father is dead.  Returning home he finds his world is utterly changed, his certainties smashed and his home a foreign land. Struggling to understand his place in a new world order he faces a stark choice. Submit, or rage against the injustice of his new reality.  Simon Godwin (The Two Gentlemen of Verona 2014) directs Paapa Essiedu as Hamlet in Shakespeare's searing tragedy.  As relevant today as when it was written, Hamlet confronts each of us with the mirror of our own mortality in an imperfect world.  Hamlet played in the Royal Shakespeare Theatre, Stratford-upon-Avon until throughout summer 2016.",
+            "popularity": 2.59,
+            "poster_path": "/h67jZezLtHJnkLqRrEcLBw2gs9q.jpg",
+            "release_date": "2016-06-10",
+            "title": "RSC Live: Hamlet",
+            "video": true,
+            "vote_average": 8,
+            "vote_count": 3
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                18,
+                10770
+            ],
+            "id": 106848,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "Hamlet comes home from university to find his uncle married to his mother, and his father's ghost haunting the battlements and scaring the watch. Then his father's ghost directs him to seek revenge.",
+            "popularity": 1.401,
+            "poster_path": "/likCM9gnmoijClCw6K4tAVdJIfd.jpg",
+            "release_date": "1980-05-25",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 5.8,
+            "vote_count": 11
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 140631,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "Treachery, sex and revenge take center stage for Prince Hamlet and his eventual descent into madness.",
+            "popularity": 1.616,
+            "poster_path": null,
+            "release_date": "2012-11-02",
+            "title": "Hamlet",
+            "video": false,
+            "vote_average": 4,
+            "vote_count": 4
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/3Lc0fPB5q7QF0y2nm43LIcrPx5z.jpg",
+            "genre_ids": [
+                35,
+                27
+            ],
+            "id": 108435,
+            "original_language": "en",
+            "original_title": "Zombie Hamlet",
+            "overview": "Desperate filmmaker Osric Taylor dreams of making his civil war Hamlet but when production funding dries up, he agrees to take southern matron Hester Beauchamps offer to fund the film if he throws some zombies in it to make their money back. But when Hester dies in mid shoot, Osric dresses up as Hester to cash the last check and awakens the suspicions of both the local police and ambitious local news reporter Shine Reynolds. Inspired by an actual incident.",
+            "popularity": 2.089,
+            "poster_path": "/eDOP19dewHmSRQQQuVailUkLxUk.jpg",
+            "release_date": "2012-04-14",
+            "title": "Zombie Hamlet",
+            "video": false,
+            "vote_average": 5.5,
+            "vote_count": 9
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                18
+            ],
+            "id": 380001,
+            "original_language": "en",
+            "original_title": "Hamlet",
+            "overview": "William Houston's portrayal of the Danish prince.",
+            "popularity": 1.4,
+            "poster_path": null,
+            "release_date": "2003-01-01",
+            "title": "Hamlet",
+            "video": true,
+            "vote_average": 1,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                18
+            ],
+            "id": 491523,
+            "original_language": "fi",
+            "original_title": "Hamlet",
+            "overview": "Hamlet suspects his uncle has murdered his father to claim the throne of Denmark and the hand of Hamlet's mother, but the prince cannot decide whether or not he should take vengeance.  Direct television broadcast from Kino Helsinki. Students from Theatre Academy Helsinki working under director Jouko Turkka.",
+            "popularity": 1.34,
+            "poster_path": "/jKOquIqr0W7SXS9amN61radN2mg.jpg",
+            "release_date": "1985-10-10",
+            "title": "Hamlet",
+            "video": true,
+            "vote_average": 0,
+            "vote_count": 0
+        }
+    ],
+    "total_pages": 7,
+    "total_results": 126
+}
