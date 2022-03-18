@@ -15,7 +15,7 @@ export async function searchTitle(
     apiKey: string
 ): Promise<TmdbMovie[]> {
     const response = await fetch(
-        "https://api.themoviedb.org/3/search/movie?&language=en-US&query=piemonten&page=1&include_adult=false",
+        `https://api.themoviedb.org/3/search/movie?&language=en-US&query=${title}&page=1&include_adult=false`,
         {
             headers: {
                 Authorization: `Bearer ${apiKey}`,
