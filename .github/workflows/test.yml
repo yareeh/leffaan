@@ -15,7 +15,7 @@ jobs:
       - run: yarn lint
       - run: yarn test
       - run: ./runBrowserTests.sh
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: playwright-report
