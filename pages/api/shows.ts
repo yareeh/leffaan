@@ -1,8 +1,35 @@
+import dotenv from "dotenv"
 import type { NextApiRequest, NextApiResponse } from "next"
 import { finnkinoShowToShow, parseFinnkino } from "../../src/finnkino"
 import { kinotShowToShow, parseKinotJson } from "../../src/kinot-fi"
 import { mockDate, mockFinnkino, mockKinot } from "../../src/mocks"
-import { Show } from "../../src/types"
+import { MovieStorage } from "../../src/movieStorage"
+import { searchTitle } from "../../src/tmdb"
+import { Operator, Show } from "../../src/types"
+
+dotenv.config()
+const apiKey = process.env.TMDB_API_KEY
+if (!apiKey) throw new Error("No TMDB_API_KEY")
+
+const movies = new MovieStorage()
+
+let matchMovie = async (
+    title: string,
+    operator: Operator,
+    id: string | number,
+    year?: number
+): Promise<number> => {
+    const fromStorage = movies.find(operator, id)
+    if (fromStorage !== undefined) {
+        return fromStorage.tmdbId
+    }
+    const fromTmdb = await searchTitle(
+        title,
+        apiKey,
+        year ? year : timeSource().getFullYear()
+    )
+    return fromTmdb[0]?.id
+}
 
 let getKinot = async () => {
     const response = await fetch(
@@ -28,13 +55,51 @@ if (process.env.LEFFAAN_MODE === "test") {
 async function getKinotShows(): Promise<Show[]> {
     const kinotResponse = await getKinot()
     const kinotResult = parseKinotJson(kinotResponse)
-    return kinotResult.map(kinotShowToShow)
+    const kinotMapped = []
+    for (const show of kinotResult) {
+        const tmdbId = await matchMovie(
+            show.movie_title,
+            "Kinot",
+            show.movie_id
+        )
+        if (tmdbId !== undefined) {
+            movies.set({
+                tmdbId,
+                localTitles: [{ lang: "fi", value: show.movie_title }],
+                operatorUrls: [{ operator: "Kinot", url: show.link }],
+                operatorIds: [{ operator: "Kinot", id: show.movie_id }],
+            })
+            kinotMapped.push({ show, tmdbId })
+        }
+    }
+    return kinotMapped.map((s) => kinotShowToShow(s.show, s.tmdbId))
 }
 
 async function getFinnkinoShows(): Promise<Show[]> {
     const finnkinoXml = await getFinnkino()
     const finnkinoShows = parseFinnkino(finnkinoXml)
-    return finnkinoShows.map(finnkinoShowToShow)
+    const finnkinoMapped = []
+    for (const show of finnkinoShows) {
+        const tmdbId = await matchMovie(
+            show.OriginalTitle,
+            "Finnkino",
+            show.EventID,
+            show.ProductionYear
+        )
+        if (tmdbId !== undefined) {
+            movies.set({
+                tmdbId,
+                operatorIds: [{ operator: "Finnkino", id: show.EventID }],
+                localTitles: [{ lang: "fi", value: show.Title }],
+                operatorUrls: [{ operator: "Finnkino", url: show.EventURL }],
+                originalTitle: show.OriginalTitle,
+                runningTime: show.LengthInMinutes,
+                year: show.ProductionYear,
+            })
+            finnkinoMapped.push({ show, tmdbId })
+        }
+    }
+    return finnkinoMapped.map((s) => finnkinoShowToShow(s.show, s.tmdbId))
 }
 
 export default async function handler(

@@ -44,19 +44,24 @@ export function parseFinnkino(xml: string): FinnkinoShow[] {
     return shows
 }
 
-export const finnkinoShowToShow = (show: FinnkinoShow): Show => ({
+export const finnkinoShowToShow = (
+    show: FinnkinoShow,
+    tmdbId?: number
+): Show => ({
     operatorId: show.ID,
     operator: "Finnkino",
     locationId: show.TheatreID,
     startTime: show.dttmShowStartUTC,
-    movie: {
-        operatorIds: [{ operator: "Finnkino", id: show.EventID }],
-        localTitles: [{ lang: "fi", value: show.Title }],
-        operatorUrls: [{ operator: "Finnkino", url: show.EventURL }],
-        originalTitle: show.OriginalTitle,
-        runningTime: show.LengthInMinutes,
-        year: show.ProductionYear,
-    },
+    title: show.Title,
+    tmdbId,
+    // movie: {
+    //     operatorIds: [{ operator: "Finnkino", id: show.EventID }],
+    //     localTitles: [{ lang: "fi", value: show.Title }],
+    //     operatorUrls: [{ operator: "Finnkino", url: show.EventURL }],
+    //     originalTitle: show.OriginalTitle,
+    //     runningTime: show.LengthInMinutes,
+    //     year: show.ProductionYear,
+    // },
     screen: show.TheatreAuditorium,
     showDetails: show.PresentationMethodAndLanguage,
     theatre: show.Theatre,

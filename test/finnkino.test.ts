@@ -13,29 +13,8 @@ describe("finnkino", () => {
         )
         const show = finnkinoShowToShow(shows[0])
         expect(show).to.deep.equal({
-            movie: {
-                localTitles: [
-                    {
-                        lang: "fi",
-                        value: "Guled & Nasra",
-                    },
-                ],
-                operatorIds: [
-                    {
-                        id: 303715,
-                        operator: "Finnkino",
-                    },
-                ],
-                operatorUrls: [
-                    {
-                        operator: "Finnkino",
-                        url: "http://www.finnkino.fi/event/303715/title/guled_and_nasra/",
-                    },
-                ],
-                originalTitle: "Guled & Nasra",
-                runningTime: 83,
-                year: 2021,
-            },
+            tmdbId: undefined,
+            title: "Guled & Nasra",
             operatorId: 1676827,
             operator: "Finnkino",
             startTime: new Date("2022-02-27T08:30:00.000Z"),

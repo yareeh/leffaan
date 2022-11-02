@@ -30,13 +30,14 @@ const Home: NextPage = () => {
                 {data.map((s: Show) => (
                     <div key={`${s.operator}-${s.operatorId}`} className="show">
                         <div className="show__title">
-                            {s.movie.operatorUrls[0] ? (
+                            {s.title}
+                            {/* {s.movie.operatorUrls[0] ? (
                                 <a href={s.movie.operatorUrls[0]!.url}>
                                     {s.movie.localTitles[0].value}
                                 </a>
                             ) : (
                                 <span>{s.movie.localTitles[0].value}</span>
-                            )}
+                            )} */}
                         </div>
                         <div className="show__startDateTime">
                             <a href={s.url}>
@@ -48,6 +49,15 @@ const Home: NextPage = () => {
                             </a>
                         </div>
                         <div className="show__theatre">{s.theatre}</div>
+                        {s.tmdbId ? (
+                            <div>
+                                <a
+                                    href={`https://www.themoviedb.org/movie/${s.tmdbId}`}
+                                >
+                                    TMDB
+                                </a>
+                            </div>
+                        ) : null}
                     </div>
                 ))}
             </div>

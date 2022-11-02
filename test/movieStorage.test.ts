@@ -38,4 +38,13 @@ describe("MovieStorage", () => {
         expect(storage.find("Finnkino", 123)).to.deep.equal(mergedMovie)
         expect(storage.find("Kinot", 543)).to.deep.equal(mergedMovie)
     })
+    it("adds operator id and url to movie just once", () => {
+        const storage = new MovieStorage()
+        storage.set(finnkinoMovie)
+        storage.set(JSON.parse(JSON.stringify(finnkinoMovie)))
+        storage.set(kinotMovie)
+        storage.set(JSON.parse(JSON.stringify(kinotMovie)))
+        expect(storage.find("Finnkino", 123)).to.deep.equal(mergedMovie)
+        expect(storage.find("Kinot", 543)).to.deep.equal(mergedMovie)
+    })
 })
