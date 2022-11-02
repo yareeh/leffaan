@@ -12,16 +12,17 @@ const TmdbSearchResult = z.object({
 // eslint-disable-next-line import/prefer-default-export
 export async function searchTitle(
     title: string,
-    apiKey: string
+    apiKey: string,
+    year?: number
 ): Promise<TmdbMovie[]> {
-    const response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?&language=en-US&query=${title}&page=1&include_adult=false`,
-        {
-            headers: {
-                Authorization: `Bearer ${apiKey}`,
-            },
-        }
-    )
+    const url = `https://api.themoviedb.org/3/search/movie?&language=en-US&query=${title}&page=1&include_adult=false${
+        year ? `&year=${year}` : ""
+    }`
+    const response = await fetch(url, {
+        headers: {
+            Authorization: `Bearer ${apiKey}`,
+        },
+    })
     const result = await response.json()
     const parsed = TmdbSearchResult.parse(result)
     return parsed.results

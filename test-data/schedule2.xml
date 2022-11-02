@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<Schedule xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <PubDate>2022-02-27T00:00:00+02:00</PubDate>
+  <Shows>
+    <Show>
+      <ID>1676827</ID>
+      <dtAccounting>2022-02-27T00:00:00</dtAccounting>
+      <dttmShowStart>2022-02-27T10:30:00</dttmShowStart>
+      <dttmShowStartUTC>2022-02-27T08:30:00Z</dttmShowStartUTC>
+      <dttmShowEnd>2022-02-27T12:03:00</dttmShowEnd>
+      <dttmShowEndUTC>2022-02-27T10:03:00Z</dttmShowEndUTC>
+      <ShowSalesStartTime>2000-01-01T00:00:00</ShowSalesStartTime>
+      <ShowSalesStartTimeUTC>2000-01-01T00:00:00Z</ShowSalesStartTimeUTC>
+      <ShowSalesEndTime>2022-02-27T10:15:00</ShowSalesEndTime>
+      <ShowSalesEndTimeUTC>2022-02-27T08:15:00Z</ShowSalesEndTimeUTC>
+      <ShowReservationStartTime>0001-01-01T00:00:00</ShowReservationStartTime>
+      <ShowReservationStartTimeUTC>0001-01-01T00:00:00</ShowReservationStartTimeUTC>
+      <ShowReservationEndTime>0001-01-01T00:00:00</ShowReservationEndTime>
+      <ShowReservationEndTimeUTC>0001-01-01T00:00:00</ShowReservationEndTimeUTC>
+      <EventID>303715</EventID>
+      <Title>Guled &amp; Nasra</Title>
+      <OriginalTitle>Guled &amp; Nasra</OriginalTitle>
+      <ProductionYear>2021</ProductionYear>
+      <LengthInMinutes>83</LengthInMinutes>
+      <dtLocalRelease>2021-11-12T00:00:00</dtLocalRelease>
+      <Rating>12</Rating>
+      <RatingLabel>12</RatingLabel>
+      <RatingImageUrl>https://media.finnkino.fi/images/rating_large_12.png</RatingImageUrl>
+      <EventType>Movie</EventType>
+      <Genres>Draama</Genres>
+      <TheatreID>1034</TheatreID>
+      <TheatreAuditriumID>1195</TheatreAuditriumID>
+      <Theatre>Kinopalatsi, Helsinki</Theatre>
+      <TheatreAuditorium>sali 7</TheatreAuditorium>
+      <TheatreAndAuditorium>Kinopalatsi, Helsinki, sali 7</TheatreAndAuditorium>
+      <PresentationMethodAndLanguage>2D, somali</PresentationMethodAndLanguage>
+      <PresentationMethod>2D</PresentationMethod>
+      <EventSeries />
+      <ShowURL>http://www.finnkino.fi/websales/show/1676827/</ShowURL>
+      <EventURL>http://www.finnkino.fi/event/303715/title/guled_and_nasra/</EventURL>
+      <SpokenLanguage>
+        <Name>somali</Name>
+        <NameInLanguage />
+        <ISOTwoLetterCode>SO</ISOTwoLetterCode>
+      </SpokenLanguage>
+      <SubtitleLanguage1>
+        <Name>suomi</Name>
+        <NameInLanguage />
+        <ISOTwoLetterCode>FI</ISOTwoLetterCode>
+      </SubtitleLanguage1>
+      <SubtitleLanguage2>
+        <Name>ruotsi</Name>
+        <NameInLanguage />
+        <ISOTwoLetterCode>SV</ISOTwoLetterCode>
+      </SubtitleLanguage2>
+      <Images>
+        <EventSmallImagePortrait>http://media.finnkino.fi/1012/Event_13211/portrait_small/Guled_1080.jpg</EventSmallImagePortrait>
+        <EventMediumImagePortrait>http://media.finnkino.fi/1012/Event_13211/portrait_medium/Guled_1080.jpg</EventMediumImagePortrait>
+        <EventLargeImagePortrait>http://media.finnkino.fi/1012/Event_13211/portrait_small/Guled_1080.jpg</EventLargeImagePortrait>
+        <EventSmallImageLandscape>http://media.finnkino.fi/1012/Event_13211/landscape_small/Guled_444.jpg</EventSmallImageLandscape>
+        <EventLargeImageLandscape>http://media.finnkino.fi/1012/Event_13211/landscape_large/Guled_670.jpg</EventLargeImageLandscape>
+      </Images>
+      <ContentDescriptors>
+        <ContentDescriptor>
+          <Name>Disturbing</Name>
+          <ImageURL>https://media.finnkino.fi/images/content_Disturbing.png</ImageURL>
+        </ContentDescriptor>
+      </ContentDescriptors>
+    </Show>
+    <Show>
+      <ID>1676855</ID>
+      <dtAccounting>2022-02-27T00:00:00</dtAccounting>
+      <dttmShowStart>2022-02-27T10:30:00</dttmShowStart>
+      <dttmShowStartUTC>2022-02-27T08:30:00Z</dttmShowStartUTC>
+      <dttmShowEnd>2022-02-27T12:04:00</dttmShowEnd>
+      <dttmShowEndUTC>2022-02-27T10:04:00Z</dttmShowEndUTC>
+      <ShowSalesStartTime>2000-01-01T00:00:00</ShowSalesStartTime>
+      <ShowSalesStartTimeUTC>2000-01-01T00:00:00Z</ShowSalesStartTimeUTC>
+      <ShowSalesEndTime>2022-02-27T10:15:00</ShowSalesEndTime>
+      <ShowSalesEndTimeUTC>2022-02-27T08:15:00Z</ShowSalesEndTimeUTC>
+      <ShowReservationStartTime>0001-01-01T00:00:00</ShowReservationStartTime>
+      <ShowReservationStartTimeUTC>0001-01-01T00:00:00</ShowReservationStartTimeUTC>
+      <ShowReservationEndTime>0001-01-01T00:00:00</ShowReservationEndTime>
+      <ShowReservationEndTimeUTC>0001-01-01T00:00:00</ShowReservationEndTimeUTC>
+      <EventID>303782</EventID>
+      <Title>Piemonten tryffelinmetsästäjät</Title>
+      <OriginalTitle>The Truffle Hunters</OriginalTitle>
+      <ProductionYear>2021</ProductionYear>
+      <LengthInMinutes>84</LengthInMinutes>
+      <dtLocalRelease>2021-12-10T00:00:00</dtLocalRelease>
+      <Rating>S</Rating>
+      <RatingLabel>S</RatingLabel>
+      <RatingImageUrl>https://media.finnkino.fi/images/rating_large_S.png</RatingImageUrl>
+      <EventType>Movie</EventType>
+      <Genres>Dokumentti</Genres>
+      <TheatreID>1034</TheatreID>
+      <TheatreAuditriumID>1263</TheatreAuditriumID>
+      <Theatre>Kinopalatsi, Helsinki</Theatre>
+      <TheatreAuditorium>sali 8</TheatreAuditorium>
+      <TheatreAndAuditorium>Kinopalatsi, Helsinki, sali 8</TheatreAndAuditorium>
+      <PresentationMethodAndLanguage>2D, italia</PresentationMethodAndLanguage>
+      <PresentationMethod>2D</PresentationMethod>
+      <EventSeries />
+      <ShowURL>http://www.finnkino.fi/websales/show/1676855/</ShowURL>
+      <EventURL>http://www.finnkino.fi/event/303782/title/piemonten_tryffelinmets%C3%A4st%C3%A4j%C3%A4t/</EventURL>
+      <SpokenLanguage>
+        <Name>italia</Name>
+        <NameInLanguage />
+        <ISOTwoLetterCode>IT</ISOTwoLetterCode>
+      </SpokenLanguage>
+      <SubtitleLanguage1>
+        <Name>suomi</Name>
+        <NameInLanguage />
+        <ISOTwoLetterCode>FI</ISOTwoLetterCode>
+      </SubtitleLanguage1>
+      <SubtitleLanguage2>
+        <Name>ruotsi</Name>
+        <NameInLanguage />
+        <ISOTwoLetterCode>SV</ISOTwoLetterCode>
+      </SubtitleLanguage2>
+      <Images>
+        <EventSmallImagePortrait>http://media.finnkino.fi/1012/Event_13284/portrait_small/Piemonte_1080.jpg</EventSmallImagePortrait>
+        <EventMediumImagePortrait>http://media.finnkino.fi/1012/Event_13284/portrait_medium/Piemonte_1080.jpg</EventMediumImagePortrait>
+        <EventLargeImagePortrait>http://media.finnkino.fi/1012/Event_13284/portrait_small/Piemonte_1080.jpg</EventLargeImagePortrait>
+        <EventSmallImageLandscape>http://media.finnkino.fi/1012/Event_13284/landscape_small/Piemonte_444.jpg</EventSmallImageLandscape>
+        <EventLargeImageLandscape>http://media.finnkino.fi/1012/Event_13284/landscape_large/Piemonte_670.jpg</EventLargeImageLandscape>
+      </Images>
+      <ContentDescriptors />
+    </Show>
+  </Shows>
+</Schedule>

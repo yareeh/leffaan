@@ -25,14 +25,16 @@ export function parseKinotJson(json: any): KinotShow[] {
     const shows: KinotShow[] = z.array(KinotShow).parse(json)
     return shows
 }
-export function kinotShowToShow(show: KinotShow): Show {
+export function kinotShowToShow(show: KinotShow, tmdbId?: number): Show {
     return {
         operatorId: show.id,
-        movie: {
-            localTitles: [{ lang: "fi", value: show.movie_title }],
-            operatorUrls: [{ operator: "Kinot", url: show.link }],
-            operatorIds: [{ operator: "Kinot", id: show.movie_id }],
-        },
+        title: show.movie_title,
+        tmdbId,
+        // movie: {
+        //     localTitles: [{ lang: "fi", value: show.movie_title }],
+        //     operatorUrls: [{ operator: "Kinot", url: show.link }],
+        //     operatorIds: [{ operator: "Kinot", id: show.movie_id }],
+        // },
         operator: "Kinot",
         startTime: show.datetime,
         theatre: show.theater_title,

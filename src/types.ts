@@ -12,12 +12,13 @@ export interface Movie {
     runningTime?: number
     operatorUrls: { operator: Operator; url: string }[]
     operatorIds: { operator: Operator; id: string | number }[]
-    tmdbId?: number
+    tmdbId: number
 }
 
 export interface Show {
     operatorId: string | number
-    movie: Movie
+    tmdbId?: number
+    title: string
     operator: Operator
     startTime: Date
     locationId?: string | number

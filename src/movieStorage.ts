@@ -1,7 +1,11 @@
 import { Movie, Operator } from "./types"
 
-function onlyUnique(value: any, index: number, self: any[]) {
-    return self.indexOf(value) === index
+function onlyUnique(
+    value: { operator: Operator },
+    index: number,
+    self: { operator: Operator }[]
+) {
+    return self.findIndex((item) => item.operator === value.operator) === index
 }
 
 export class MovieStorage {
@@ -16,8 +20,9 @@ export class MovieStorage {
     set(movie: Movie) {
         const tmdbId = `${movie.tmdbId}`
         let newMovie = movie
-        if (this.movies[tmdbId]) {
-            const existing = this.movies[tmdbId]
+        const found = this.movies[`tmdb:${tmdbId}`]
+        if (found) {
+            const existing = found
             const operatorIds = existing.operatorIds
                 .concat(movie.operatorIds)
                 .filter(onlyUnique)
@@ -27,9 +32,9 @@ export class MovieStorage {
             newMovie = { ...existing, operatorIds, operatorUrls }
         }
 
-        this.movies[tmdbId] = newMovie
+        this.movies[`tmdb:${tmdbId}`] = newMovie
         movie.operatorIds.forEach((id) => {
-            this.mappings[`${id.operator}:${id.id}`] = `${movie.tmdbId}`
+            this.mappings[`${id.operator}:${id.id}`] = `tmdb:${movie.tmdbId}`
         })
     }
 }
