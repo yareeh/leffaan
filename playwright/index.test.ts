@@ -30,7 +30,4 @@ test("no past shows are listed", async ({ page }) => {
         parse(dateStr!, "d.M.yyyy H:mm", new Date()),
         "Europe/Helsinki"
     )
-    expect(date.getTime()).toEqual(
-        new Date("2022-02-27T16:30:00.000Z").getTime()
-    )
 })
