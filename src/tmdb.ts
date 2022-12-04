@@ -4,7 +4,7 @@ import * as z from "zod"
 import { number } from "zod"
 
 const TmdbMovie = z.object({ id: z.number(), original_title: z.string() })
-type TmdbMovie = z.infer<typeof TmdbMovie>
+export type TmdbMovie = z.infer<typeof TmdbMovie>
 const TmdbSearchResult = z.object({
     total_results: number(),
     results: z.array(TmdbMovie),
