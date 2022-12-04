@@ -49,6 +49,11 @@
     padding: 4px;
 }
 
+.show.watch-list {
+    color: black;
+    background-color: aliceblue;
+}
+
 .show__title {
     font-weight: bolder;
     font-size: larger;
