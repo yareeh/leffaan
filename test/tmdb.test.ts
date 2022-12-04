@@ -1,7 +1,7 @@
 import { expect } from "chai"
 import { readFileSync } from "fs"
 import nock from "nock"
-import { searchTitle } from "../src/tmdb"
+import { getWatchList, searchTitle } from "../src/tmdb"
 
 const apiKey = "my api key"
 
@@ -58,5 +58,10 @@ describe("TMDB", () => {
             id: 8749,
             original_title: "Hamlet liikemaailmassa",
         })
+    })
+
+    it("watch list", async () => {
+        const result = await getWatchList("yareeh")
+        expect(result.length).is.greaterThan(0)
     })
 })
