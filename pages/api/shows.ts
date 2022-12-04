@@ -28,6 +28,11 @@ let matchMovie = async (
         apiKey,
         year ? year : timeSource().getFullYear()
     )
+    if (fromTmdb.length > 1) {
+        for (const movie of fromTmdb) {
+            if (movie.original_title === title) return movie.id
+        }
+    }
     return fromTmdb[0]?.id
 }
 
