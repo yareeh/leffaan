@@ -33,7 +33,7 @@ let matchMovie = async (
     }
     const fromTmdb = await searchTitle(
         title,
-        apiKey,
+        apiKey || "",
         year ? year : timeSource().getFullYear()
     )
     if (fromTmdb.length > 1) {
