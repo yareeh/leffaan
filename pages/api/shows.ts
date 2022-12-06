@@ -15,8 +15,9 @@ import { searchTitle } from "../../src/tmdb"
 import { Operator, Show } from "../../src/types"
 
 dotenv.config()
+const TestMode = process.env.LEFFAAN_MODE === "test"
 const apiKey = process.env.TMDB_API_KEY
-if (!apiKey) throw new Error("No TMDB_API_KEY")
+if (!TestMode && !apiKey) throw new Error("No TMDB_API_KEY")
 
 const movies = new MovieStorage()
 
@@ -62,7 +63,7 @@ let getBioRex = async () => {
 
 let timeSource = () => new Date()
 
-if (process.env.LEFFAAN_MODE === "test") {
+if (TestMode) {
     getKinot = mockKinot
     getFinnkino = mockFinnkino
     getBioRex = mockBioRex
