@@ -3,7 +3,7 @@ interface LocalizedString {
     value: string
 }
 
-export type Operator = "Finnkino" | "Kinot"
+export type Operator = "Finnkino" | "Kinot" | "BioRex"
 
 export interface Movie {
     originalTitle?: string
