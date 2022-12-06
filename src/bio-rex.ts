@@ -39,7 +39,7 @@ export function bioRexJsonToDom(json: any): Show[] {
                 "Europe/Helsinki"
             )
 
-            const url = s.getAttribute("href")!
+            const url = `${operatorId}?f_cinemas=all`
             const show: Show = {
                 operator,
                 operatorId,
