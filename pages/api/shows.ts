@@ -1,5 +1,6 @@
 import dotenv from "dotenv"
 import type { NextApiRequest, NextApiResponse } from "next"
+import { bioRexJsonToDom, fetchBioRexJson } from "../../src/bio-rex"
 import { finnkinoShowToShow, parseFinnkino } from "../../src/finnkino"
 import { kinotShowToShow, parseKinotJson } from "../../src/kinot-fi"
 import { mockDate, mockFinnkino, mockKinot } from "../../src/mocks"
@@ -55,6 +56,27 @@ if (process.env.LEFFAAN_MODE === "test") {
     getFinnkino = mockFinnkino
     timeSource = mockDate
     console.log("Running in test mode")
+}
+
+async function getBioRexShows(): Promise<Show[]> {
+    const bioRexJson = await fetchBioRexJson()
+    const rexShows = bioRexJsonToDom(bioRexJson)
+    const rexMapped: Show[] = []
+    for (const show of rexShows) {
+        const tmdbId = await matchMovie(show.title, "BioRex", show.operatorId)
+        if (tmdbId !== undefined) {
+            movies.set({
+                tmdbId,
+                localTitles: [{ lang: "fi", value: show.title }],
+                operatorUrls: [
+                    { operator: "BioRex", url: show.operatorId.toString() },
+                ],
+                operatorIds: [{ operator: "BioRex", id: show.operatorId }],
+            })
+            rexMapped.push({ ...show, tmdbId })
+        }
+    }
+    return rexMapped
 }
 
 async function getKinotShows(): Promise<Show[]> {
@@ -113,8 +135,9 @@ export default async function handler(
 ) {
     const kinotShows = await getKinotShows()
     const finnkinoShows = await getFinnkinoShows()
+    const rexShows = await getBioRexShows()
     const now = timeSource().getTime()
-    const allShows = [...kinotShows, ...finnkinoShows]
+    const allShows = [...kinotShows, ...finnkinoShows, ...rexShows]
         .filter((s) => s.startTime.getTime() >= now)
         .sort((s1, s2) => s1.startTime.getTime() - s2.startTime.getTime())
 
