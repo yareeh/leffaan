@@ -11,7 +11,7 @@ describe("Bio Rex", () => {
         const shows = bioRexJsonToShows(json)
         const firstShow = shows[0]
         expect(firstShow.startTime.toISOString()).equal(
-            "2022-12-06T10:15:00.000Z"
+            "2022-02-27T10:15:00.000Z"
         )
         expect(firstShow.title).to.equal("Violent Night")
         expect(firstShow.theatre).to.equal("BioRex Redi")
