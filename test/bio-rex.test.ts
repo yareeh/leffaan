@@ -1,6 +1,6 @@
 import { expect } from "chai"
 import { readFileSync } from "fs"
-import { bioRexJsonToDom } from "../src/bio-rex"
+import { bioRexJsonToShows } from "../src/bio-rex"
 
 describe("Bio Rex", () => {
     it("can convert html to shows", () => {
@@ -8,7 +8,7 @@ describe("Bio Rex", () => {
             readFileSync("./test-data/bio-rex.json").toString()
         )
 
-        const shows = bioRexJsonToDom(json)
+        const shows = bioRexJsonToShows(json)
         const firstShow = shows[0]
         expect(firstShow.startTime.toISOString()).equal(
             "2022-12-06T10:15:00.000Z"

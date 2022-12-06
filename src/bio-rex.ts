@@ -42,7 +42,7 @@ export async function fetchBioRexJson() {
     return result.json()
 }
 
-export function bioRexJsonToDom(json: any): Show[] {
+export function bioRexJsonToShows(json: any): Show[] {
     const html = BioRexJson.parse(json).posts
     const dom = new jsdom.JSDOM(html).window.document.body
     const result: Show[] = []
