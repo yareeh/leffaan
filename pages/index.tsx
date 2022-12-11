@@ -5,8 +5,6 @@ import { NextPage } from "next/types"
 import useSWR from "swr"
 import { TmdbMovie } from "../src/tmdb"
 import { Show } from "../src/types"
-import styles from "../styles/Home.module.css"
-
 interface ShowCardProps {
     show: Show
     watchList: boolean
@@ -17,28 +15,19 @@ function ShowCard(props: ShowCardProps) {
 
     return (
         <div className={classnames("show", watchList && "watch-list")}>
-            <div className="show__title">
-                {show.title}
-                {/* {s.movie.operatorUrls[0] ? (
-            <a href={s.movie.operatorUrls[0]!.url}>
-                {s.movie.localTitles[0].value}
-            </a>
-        ) : (
-            <span>{s.movie.localTitles[0].value}</span>
-        )} */}
-            </div>
-            <div className="show__startDateTime">
-                <a href={show.url}>
+            <a href={show.url}>
+                <h4 className="show__title">{show.title}</h4>
+                <div className="show__start">
                     {formatInTimeZone(
                         show.startTime,
                         "Europe/Helsinki",
                         "d.M.yyyy H:mm"
                     )}
-                </a>
-            </div>
-            <div className="show__theatre">{show.theatre}</div>
+                </div>
+                <div className="show__theatre">{show.theatre}</div>
+            </a>
             {show.tmdbId ? (
-                <div>
+                <div className="show__info">
                     <a href={`https://www.themoviedb.org/movie/${show.tmdbId}`}>
                         TMDB
                     </a>
@@ -82,23 +71,33 @@ const Home: NextPage = () => {
     )
 
     return (
-        <div className={styles.container}>
-            <div>
-                <h1>Shows</h1>
-                {watchListShows.map((s: Show) => (
-                    <ShowCard
-                        key={`${s.operator}-${s.operatorId}`}
-                        show={s}
-                        watchList={true}
-                    />
-                ))}
-                {otherShows.map((s: Show) => (
-                    <ShowCard
-                        key={`${s.operator}-${s.operatorId}`}
-                        show={s}
-                        watchList={false}
-                    />
-                ))}
+        <div>
+            <div className="leffaan">
+                <h1>Leffaan</h1>
+                {watchListShows.length > 0 && (
+                    <div>
+                        <h2>Omat leffat</h2>
+                        <div className="show-container">
+                            {watchListShows.map((s: Show) => (
+                                <ShowCard
+                                    key={`${s.operator}-${s.operatorId}`}
+                                    show={s}
+                                    watchList={true}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                )}
+                <h2>Muu ohjelmisto</h2>
+                <div className="show-container">
+                    {otherShows.map((s: Show) => (
+                        <ShowCard
+                            key={`${s.operator}-${s.operatorId}`}
+                            show={s}
+                            watchList={false}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )
