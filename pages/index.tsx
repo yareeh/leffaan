@@ -80,7 +80,7 @@ const Home: NextPage = () => {
                         <div className="show-container">
                             {watchListShows.map((s: Show) => (
                                 <ShowCard
-                                    key={`${s.operator}-${s.operatorId}`}
+                                    key={`${s.operator}-${s.operatorId}-${s.startTime}`}
                                     show={s}
                                     watchList={true}
                                 />
@@ -92,7 +92,7 @@ const Home: NextPage = () => {
                 <div className="show-container">
                     {otherShows.map((s: Show) => (
                         <ShowCard
-                            key={`${s.operator}-${s.operatorId}`}
+                            key={`${s.operator}-${s.operatorId}-${s.startTime}`}
                             show={s}
                             watchList={false}
                         />
