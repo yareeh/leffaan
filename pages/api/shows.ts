@@ -1,3 +1,5 @@
+import { endOfDay } from "date-fns"
+import { zonedTimeToUtc } from "date-fns-tz"
 import dotenv from "dotenv"
 import type { NextApiRequest, NextApiResponse } from "next"
 import { bioRexJsonToShows, fetchBioRexJson } from "../../src/bio-rex"
@@ -151,8 +153,14 @@ export default async function handler(
     const finnkinoShows = await getFinnkinoShows()
     const rexShows = await getBioRex()
     const now = timeSource().getTime()
+    const midnight = zonedTimeToUtc(
+        endOfDay(timeSource()),
+        "Europe/Helsinki"
+    ).getTime()
+
     const allShows = [...kinotShows, ...finnkinoShows, ...rexShows]
         .filter((s) => s.startTime.getTime() >= now)
+        .filter((s) => s.startTime.getTime() <= midnight)
         .sort((s1, s2) => s1.startTime.getTime() - s2.startTime.getTime())
 
     res.status(200).json(allShows)
