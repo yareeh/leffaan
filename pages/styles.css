@@ -169,6 +169,6 @@ small, .text_small {
     text-decoration: none;
 }
 
-.show__title, .show__start, .show__theatre, .show__info, .show a:visited {
+.show__title, .show__start, .show__theatre, .show__info, .show a {
     color: var(--dark-tyrian-blue);
 }
